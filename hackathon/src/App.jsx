@@ -30,7 +30,7 @@ function App() {
     <div className="container">
       <div className="App">
         <h1>Conexión a la API de OpenWeatherMap</h1>
-      </div> 
+    </div> 
     </div>
     
     <footer/>
