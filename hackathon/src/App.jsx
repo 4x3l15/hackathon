@@ -6,9 +6,9 @@ import './App.css'
 const API_KEY = '5c7340979b43d3bf68119c75225907e0'; // Reemplázalo con tu clave API
 const LATITUDE = -31.4167;  // Latitud de Córdoba
 const LONGITUDE = -64.1833; // Longitud de Córdoba
-function App() {
-  const [count, setCount] = useState(0)
 
+function App() {
+  const [airQualityData, setAirQualityData] = useState(null);
     // Función para conectarse a la API
     const fetchAirQualityData = async () => {
       try {
@@ -21,17 +21,19 @@ function App() {
       }
     };
     
-      // Llamada a la API al cargar el componente
     useEffect(() => {
       fetchAirQualityData();
     }, []);
-    
+
   return (
     <>
-          <div className="App">
-      <h1>Conexión a la API de OpenWeatherMap</h1>
-      <p>Revisa la consola para ver los datos.</p>
+    <div className="container">
+      <div className="App">
+        <h1>Conexión a la API de OpenWeatherMap</h1>
+      </div> 
     </div>
+    
+    <footer/>
     </>
   )
 }
